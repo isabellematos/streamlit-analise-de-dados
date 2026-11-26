@@ -24,6 +24,7 @@ Se algum arquivo estiver ausente, o app mostra quais são. Para gerá-los de nov
 1. Publique a pasta em um repositório do GitHub, incluindo `app.py`, `requirements.txt` e `resultados/`.
 2. Em https://share.streamlit.io, crie um app apontando para o repositório e para `app.py`.
 3. Em *Advanced settings*, escolha Python 3.13.
+4. Link Streamlit publicado: https://2tsbnemt7qnsmljvdzr5nq.streamlit.app/
 
 O app não usa `modelos.joblib`, então a versão do scikit-learn não afeta a execução.
 
