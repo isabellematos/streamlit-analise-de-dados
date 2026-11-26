@@ -1,0 +1,44 @@
+PROJETO ICD - PARTES 1 E 3
+
+ARQUIVOS PRINCIPAIS
+Parte_1_Analise.ipynb: análise exploratória, leitura da fonte, indicadores e gráficos.
+Parte_3_Modelagem.ipynb: treinamento e comparação de K-means e DBSCAN.
+Relatorio_Partes_1_e_3.pdf: justificativas, resultados, limitações e roteiro de apresentação.
+dados/originais/Tabela 1.16.xls: fonte original do IBGE, com taxas e CV de 2012 a 2022.
+resultados/: dados tratados, indicadores, métricas, perfis, gráficos e modelos treinados.
+
+COMO EXECUTAR
+1. Extraia o pacote inteiro mantendo as pastas.
+2. Em um ambiente Python 3.13, execute:
+   python -m pip install -r requirements.txt
+   python -m pip install notebook
+   python -m notebook
+3. Abra Parte_1_Analise.ipynb na pasta do projeto e execute todas as células.
+4. Execute Parte_3_Modelagem.ipynb depois da parte 1.
+Os notebooks entregues já contêm saídas. Não é necessário instalar nada apenas para ler o PDF.
+Para Colab, envie a pasta dados e execute os notebooks com a pasta do projeto como diretório atual.
+
+FONTE
+IBGE, Estatísticas de Gênero, Indicadores sociais das mulheres no Brasil, 3ª edição, 2024.
+https://ftp.ibge.gov.br/Estatisticas_de_Genero/Indicadores_sociais_das_mulheres_no_Brasil_3a_edicao/xls/1_Empoderamento_Economico_xls.zip
+Consulta/recuperação: 19/11/2026. O arquivo é histórico; não representa taxas de 2026.
+A origem primária é PNAD Contínua; as notas de cobertura estão no notebook e no XLS.
+
+ESCOPO
+O enunciado específico da parte 1 não foi enviado. Foram usadas as perguntas do notebook original e os requisitos da apresentação.
+A parte 2 não foi solicitada nem fornecida: esta entrega exporta resultados para sua integração, mas não contém aplicativo Streamlit.
+Não há estimativas específicas de São Paulo nesta tabela. Não extrapolar os resultados nacionais.
+O roteiro de 15 minutos está no fim do relatório; não foi criado um arquivo de slides.
+
+RESULTADOS PARA A PARTE 2
+dados_tratados.csv: ano, grupo, segmento, sexo, taxas percentuais e CV percentuais.
+indicadores.json: KPIs nacionais de 2022 e gaps em pontos percentuais.
+perfis_clusters.csv: 20 perfis de 2022 e rótulos dos dois modelos (-1 = ruído DBSCAN).
+metricas_modelos.csv: todas as configurações, índices internos, cobertura e ruído.
+resumo_modelagem.json: configurações escolhidas e sensibilidade.
+modelos.joblib: scaler e modelos; carregar somente este arquivo confiável e na versão de sklearn usada na entrega.
+
+VALIDAÇÃO
+Leitura da fonte, chaves únicas, taxas entre 0 e 100, extrema <= pobreza, ausência de taxas faltantes,
+20 perfis na modelagem e execução completa de todas as células. Os índices não são validação externa.
+Os dados representam estimativas agregadas e sobrepostas, não observações individuais independentes.

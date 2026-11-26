@@ -1,0 +1,10 @@
+{
+  "kmeans": "KMeans k=2",
+  "dbscan": "DBSCAN eps=0.5 min=3",
+  "sensibilidade": {
+    "ari_min_sementes": 1.0,
+    "ari_medio_sementes": 1.0,
+    "ari_sem_padronizacao": 0.4657624875951042
+  },
+  "n_perfis": 20
+}
